@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Book Exchange</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
@@ -12,11 +12,13 @@
     <h1>Exchange Books with Fellow Students</h1>
     <p>Share, borrow, and exchange books easily within your university</p>
 
-    <div class="buttons">
+    <div class="buttons hero-buttons">
         <a href="/register" class="btn">📝 Register</a>
         <a href="/login" class="btn">🔐 Login</a>
-        <a href="/books" class="btn">📖 Browse Books</a>
+        <a href="/books" class="btn">📚 Browse Books</a>
         <a href="/add" class="btn">➕ Add Book</a>
+        <a href="/search" class="btn btn-outline">🔍 Search</a>
+        <a href="/filter" class="btn btn-outline">🎯 Filter</a>
     </div>
 </div>
 

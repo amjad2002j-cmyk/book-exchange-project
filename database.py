@@ -10,7 +10,6 @@ CREATE TABLE IF NOT EXISTS books (
     author TEXT NOT NULL
 )
 """)
-
 conn.commit()
 conn.close()
 

@@ -1,3 +1,4 @@
+/* ===== Global ===== */
 body {
     font-family: 'Segoe UI', Tahoma, sans-serif;
     background: linear-gradient(135deg, #667eea, #764ba2);
@@ -5,24 +6,30 @@ body {
     min-height: 100vh;
 }
 
+/* ===== Navbar ===== */
 .navbar {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     padding: 15px 40px;
     color: white;
     font-size: 22px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
+/* ===== Page Container ===== */
 .container {
     max-width: 900px;
     margin: 80px auto;
     background: white;
     padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
     text-align: center;
 }
 
+/* ===== Titles ===== */
 h1, h2 {
     color: #2c3e50;
 }
@@ -32,32 +39,63 @@ p {
     font-size: 16px;
 }
 
-.buttons {
+/* ===== Buttons Area ===== */
+.buttons,
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
     margin-top: 30px;
 }
 
-.btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 14px 30px;
+/* ===== Buttons (ALL SAME COLOR) ===== */
+.btn,
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 26px;
     border-radius: 30px;
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
 }
 
-.btn:hover {
+.btn:hover,
+.btn-outline:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
+/* ===== Back Button (Top Left – مثل Register/Login) ===== */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+/* ===== Cards (Books) ===== */
 .card {
     background: #f4f6f8;
-    border-radius: 14px;
-    padding: 20px;
+    border-radius: 16px;
+    padding: 18px;
     margin: 15px 0;
     text-align: left;
     display: flex;
@@ -65,20 +103,76 @@ p {
     gap: 15px;
 }
 
-.icon {
-    font-size: 30px;
+.card .icon {
+    font-size: 28px;
 }
 
+/* ===== Inputs ===== */
 input {
     width: 80%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 10px;
     border: 1px solid #ccc;
-    font-size: 14px;
+    font-size: 15px;
 }
 
+/* ===== Buttons (Form Submit) ===== */
 button {
     border: none;
     cursor: pointer;
+}
+
+/* ===== Forms ===== */
+form {
+    margin-top: 20px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .container {
+        margin: 40px 15px;
+        padding: 25px;
+    }
+
+    input {
+        width: 100%;
+    }
+}
+.icon-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #667eea;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+/* Page Header (same as Register) */
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 12px;
+}
+
+/* Back button under title */
+.back-btn {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.35);
 }

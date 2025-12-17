@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">🔍 Search Books</div>
+
+<a href="/" class="btn">⬅ Back to Home</a>
+
+<div class="container">
+    <h2>Search Books</h2>
+
+    <form method="get" action="/search">
+        <input 
+            type="text" 
+            name="title" 
+            placeholder="Enter book title"
+            value="{{ request.args.get('title','') }}"
+        >
+
+        <div class="buttons">
+            <button class="btn" type="submit">Search</button>
+        </div>
+    </form>
+
+    {% if books %}
+        {% for book in books %}
+            <div class="card">
+                <div class="icon">📘</div>
+                <div>
+                    <strong>{{ book['title'] }}</strong><br>
+                    by {{ book['author'] }}
+                </div>
+            </div>
+        {% endfor %}
+    {% elif request.args %}
+        <p>No results found.</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
